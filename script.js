@@ -12,6 +12,9 @@ const description = document.querySelector('.description');
 // console.log(description);
 const wind_speed = document.querySelector('.wind_speed');
 // console.log(wind_speed);
+const Location_name = document.querySelector('.location_name');
+// console.log(Location_name);
+
 
 
 
@@ -27,12 +30,15 @@ async function checkweather(city){
         water_percent.innerHTML = "? %"
         wind_speed.innerHTML = "? Km/H";
         description.innerHTML = "Unknown Location !!!"
+        Location_name.innerHTML = `Unknown`;
     }
     else{
     weather_num.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
     description.innerHTML = `${weather_data.weather[0].description}`;
     water_percent.innerHTML = `${weather_data.main.humidity}%`;
     wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`
+    Location_name.innerHTML = `${city}`;
+    
     
     switch(weather_data.weather[0].main){
         case 'Clouds': 
