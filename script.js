@@ -22,7 +22,7 @@ async function checkweather(city){
     const weather_data = await fetch(`${url}`).then(Response => Response.json());
 
     if(weather_data.cod === '404'){
-        weather_img.src = "/img/notfound.png";
+        weather_img.src = "./img/notfound.png";
         weather_num.innerHTML = "? °C ";
         water_percent.innerHTML = "? %"
         wind_speed.innerHTML = "? Km/H";
