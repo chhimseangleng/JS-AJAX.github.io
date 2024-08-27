@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body  class=" font-saklbong bg-cover bg-center h-screen" style="background-image: url('/img/bg.jpg');">
+    
+    <div class="px-20 pt-14 w-2/3 h-2/3 bg-blue-100  mx-auto mt-24 rounded ">
+        <div class="dashboard flex ">
+            <!-- input go here -->
+            <div class="  w-4/5 h-14">
+                <input type="text" name="" id="" class="rounded w-full h-full text-xl px-5 inputlocation" placeholder="Enter Your Location...">
+            </div>
+
+            <!-- search button go here -->
+            <div class="searchbtn  mr-10 text-3xl flex items-center justify-center bg-gray-300 rounded w-1/5 h-14">
+                <button type="button" id="searchbtn" class="w-full h-full ">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="showresult mt-10">
+
+
+            <!-- show temperature -->
+            <div class="temperature ">
+
+                <!-- pic weather -->
+                <div class="showtempic w-52 m-auto">
+                    <img src="/img/sun-default.jpg" class="object-cover" id="weather_img" alt="">
+                </div>
+
+                <!-- num weather -->
+                <div class="showtemnum mt-5 items-center flex justify-center text-3xl">
+                    <p id="weather_num" class="text-3xl font-bold">
+                        ?<span><sup>°C</sup></span>
+                    </p>
+                </div>
+
+                <!-- description -->
+                <div class=" m-auto flex items-center justify-center ">
+                    <p class="description text-3xl ">Light Rian</p>
+                </div>
+            </div>
+
+            <!-- show detail -->
+            <div class="detail sm:px-3 md:px-10 lg:px-14 mt-5 flex justify-between">
+
+                <!-- detail water -->
+                <div class="water ">
+                    <div class="showwater  items-center flex justify-center">
+                        <p class="text-2xl">Humidity &emsp;</p>
+                        <i class="fa-solid fa-droplet text-4xl"></i>
+                    </div>
+    
+                    <div class="showtem mt-2 text-3xl ">
+                        <p class="water_percent">? %</p>
+                    </div>
+                </div>
+
+                <!-- detail air -->
+                <div class="air">
+                    <div class="showair items-center flex justify-center">
+                        <p class="text-2xl">Wind Speed &emsp;</p>
+                        <i class="fa-solid fa-wind text-4xl"></i>
+                    </div>
+    
+                    <div class="showtem mt-2 text-3xl">
+                        <p class="wind_speed">? Km/H</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
