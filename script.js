@@ -22,13 +22,12 @@ async function checkweather(city){
     const weather_data = await fetch(`${url}`).then(Response => Response.json());
 
     if(weather_data.cod === '404'){
-        weather_img.src = "./img/notfound.png";
+        weather_img.src = "/img/notfound.png";
         weather_num.innerHTML = "? °C ";
         water_percent.innerHTML = "? %"
         wind_speed.innerHTML = "? Km/H";
         description.innerHTML = "Unknown Location !!!"
     }
-
     else{
     weather_num.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
     description.innerHTML = `${weather_data.weather[0].description}`;
@@ -37,19 +36,19 @@ async function checkweather(city){
     
     switch(weather_data.weather[0].main){
         case 'Clouds': 
-            weather_img.src = "./img/cloudy.png";
+            weather_img.src = "/img/cloudy.png";
             break;
         case 'Clear': 
-            weather_img.src = "./img/sunny.png";
+            weather_img.src = "/img/sunny.png";
             break;
         case 'Rain': 
-            weather_img.src = "./img/rainy.png";
+            weather_img.src = "/img/rainy.png";
             break;
         case 'Mist': 
-            weather_img.src = "./img/mist.png";
+            weather_img.src = "/img/mist.png";
             break;
         case 'Snow': 
-            weather_img.src = "./img/snow.jpg";
+            weather_img.src = "/img/snow.jpg";
             break;
     }
 }
